@@ -1,0 +1,12 @@
+Source: proton-vpn-logger
+Section: python
+Priority: optional
+Maintainer: Proton Technologies AG <opensource@proton.me>
+Build-Depends: debhelper (>= 9), dh-python, python3-all, python3-setuptools, python3-proton-core
+Standards-Version: 4.1.1
+X-Python3-Version: >= 3.2
+
+Package: python3-proton-vpn-logger
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-proton-core
+Description: Python3 Proton VPN logging library

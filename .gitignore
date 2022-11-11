@@ -1,0 +1,14 @@
+build/
+dist/
+MANIFEST
+*.pyc
+*.egg-info/
+.vscode/
+*.lock
+__SOURCE_APP
+.env
+cov.xml
+html
+.coverage
+.idea
+venv
