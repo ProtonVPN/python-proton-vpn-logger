@@ -5,7 +5,7 @@ import datetime
 import logging
 import os
 from logging.handlers import RotatingFileHandler
-from proton.utils.environment import ExecutionEnvironment
+from proton.utils.environment import VPNExecutionEnvironment
 
 
 def _format_log_attributes(category, subcategory, event, optional, msg):
@@ -105,7 +105,7 @@ def config(filename, logdirpath=None):
 
     filename = filename + ".log"
 
-    logdirpath = logdirpath or ExecutionEnvironment().path_cache
+    logdirpath = logdirpath or VPNExecutionEnvironment().path_logs
     log_filepath = os.path.join(logdirpath, filename)
 
     _formatter = logging.Formatter(
