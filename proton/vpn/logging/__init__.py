@@ -105,8 +105,12 @@ def config(filename, logdirpath=None):
 
     filename = filename + ".log"
 
-    logdirpath = logdirpath or VPNExecutionEnvironment().path_logs
+    default_logdirpath = os.path.join(VPNExecutionEnvironment().path_cache, "logs")
+    logdirpath = logdirpath or default_logdirpath
+
     log_filepath = os.path.join(logdirpath, filename)
+
+    os.makedirs(logdirpath, mode=0o700, exist_ok=True)
 
     _formatter = logging.Formatter(
         fmt="%(asctime)s | %(levelname)s | %(message)s",
