@@ -131,7 +131,7 @@ def config(filename, logdirpath=None):
     os.makedirs(logdirpath, mode=0o700, exist_ok=True)
 
     _formatter = logging.Formatter(
-        fmt="%(asctime)s | %(levelname)s | %(message)s",
+        fmt="%(asctime)s | %(name)s:%(lineno)d | %(levelname)s | %(message)s",
     )
     _formatter.formatTime = (
         lambda record, datefmt=None: datetime.datetime.utcnow().isoformat()
@@ -155,8 +155,8 @@ def config(filename, logdirpath=None):
     if not _handler_console:
         logger.warning("Console logger is not set.")
 
-    if os.environ.get("PROTON_VPN_LOG_TERMINAL", "false").lower() == "true":
-        logger.addHandler(_handler_console)
+    # By default log to terminal
+    logger.addHandler(_handler_console)
 
     logger.setLevel(logging_level)
     if _handler_file:

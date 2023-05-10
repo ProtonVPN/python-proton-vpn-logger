@@ -1,3 +1,9 @@
+proton-vpn-logger (0.2.1) unstable; urgency=medium
+
+  * Display module name and line number on each log line
+
+ -- Alexandru Cheltuitor <alexandru.cheltuitor@proton.ch>  Wed, 10 May 2023 17:00:00 +0100
+
 proton-vpn-logger (0.2.0) unstable; urgency=medium
 
   * Strictly follow standardized path for logs
