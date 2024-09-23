@@ -1,3 +1,6 @@
+
+> :warning: **This module is now legacy**: The same functionality is now in python-proton-vpn-api-core module, version `0.35.2` and upwards.
+
 # Proton VPN Logger
 
 The `proton-vpn-logger` is a general purpose logging package for the entire

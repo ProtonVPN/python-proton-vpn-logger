@@ -5,10 +5,10 @@ from setuptools import setup, find_namespace_packages
 setup(
     name="proton-vpn-logger",
     version="0.2.1",
-    description="Proton Technologies VPN Logging library",
-    author="Proton Technologies",
-    author_email="contact@protonmail.com",
-    url="https://github.com/ProtonMail/proton-vpn-logger",
+    description="Proton VPN Logging library",
+    author="Proton AG",
+    author_email="opensource@proton.me",
+    url="https://github.com/ProtonVPN/python-proton-vpn-logger",
     install_requires=["proton-core"],
     extras_require={
         "development": ["pytest", "pytest-cov", "pylint", "flake8"]
